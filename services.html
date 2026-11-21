@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Support Website - Services</title>
+</head>
+<body>
+  <header>
+    <p><a href="index.html"><strong>IT Support Website</strong></a></p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section aria-labelledby="service-list-title">
+      <h2 id="service-list-title">Choose a service</h2>
+      <ul class="service-list">
+        <li><h3>Help desk</h3><p>Get guidance for error messages, slow devices, and everyday IT questions.</p></li>
+        <li><h3>Device support</h3><p>Set up computers, printers, accessories, and other hardware.</p></li>
+        <li><h3>Software support</h3><p>Install applications, fix common software problems, and apply updates.</p></li>
+        <li><h3>Network and Wi-Fi</h3><p>Troubleshoot internet access, wireless connections, and home networks.</p></li>
+        <li><h3>Account security</h3><p>Improve passwords, enable multi-factor authentication, and identify suspicious messages.</p></li>
+        <li><h3>Backup and recovery</h3><p>Plan backups and learn the first steps to take after losing important files.</p></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="price-title">
+      <h2 id="price-title">Service options and estimated prices</h2>
+      <table border="1">
+        <caption>Example prices for common support requests</caption>
+        <thead>
+          <tr>
+            <th scope="colgroup" colspan="4">Estimated service pricing</th>
+          </tr>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Support type</th>
+            <th scope="col">What is included</th>
+            <th scope="col">Example price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Help desk</th>
+            <td rowspan="2">Remote support</td>
+            <td>Up to 30 minutes of troubleshooting</td>
+            <td>$25</td>
+          </tr>
+          <tr>
+            <th scope="row">Software support</th>
+            <td>Application setup or common software fixes</td>
+            <td>$35</td>
+          </tr>
+          <tr>
+            <th scope="row">Device setup</th>
+            <td>On-site support</td>
+            <td>Computer, printer, or accessory setup</td>
+            <td>$60</td>
+          </tr>
+          <tr>
+            <th scope="row">Network support</th>
+            <td>Remote or on-site</td>
+            <td>Wi-Fi and internet connection troubleshooting</td>
+            <td>$40 and up</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Prices are examples for this student project and may vary by service.</p>
+    </section>
+
+    <section aria-labelledby="troubleshooting-title">
+      <h2 id="troubleshooting-title">Basic troubleshooting steps</h2>
+      <ol>
+        <li>Write down the error message and when the problem started.</li>
+        <li>Check power, cables, Wi-Fi, and other connections.</li>
+        <li>Restart the affected device or application, if it is safe to do so.</li>
+        <li>Collect your device and system information before requesting help.</li>
+        <li><a href="#ticket-form">Submit a support ticket</a> if the problem continues.</li>
+      </ol>
+      <p>For more help, <a href="contact.html">contact the support team</a>.</p>
+    </section>
+    <section aria-labelledby="ticket-title">
+      <h2 id="ticket-title">Create a support ticket</h2>
+      <p>Describe the problem and select your system so the support team can understand the request.</p>
+      <form id="ticket-form" action="/submit-ticket" method="post" enctype="multipart/form-data">
+        <label for="ticket-name">Your name</label><br>
+        <input id="ticket-name" name="name" type="text" autocomplete="name" required><br><br>
+
+        <label for="ticket-email">Email</label><br>
+        <input id="ticket-email" name="email" type="email" autocomplete="email" required><br><br>
+
+        <label for="device-type">Device type</label><br>
+        <select id="device-type" name="device-type" required>
+          <option value="">Choose a device</option>
+          <option value="desktop">Desktop computer</option>
+          <option value="laptop">Laptop</option>
+          <option value="phone">Phone or tablet</option>
+          <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="operating-system">Operating system</label><br>
+        <select id="operating-system" name="operating-system" required>
+          <option value="">Choose an operating system</option>
+          <option value="windows">Windows</option>
+          <option value="macos">macOS</option>
+          <option value="linux">Linux</option>
+          <option value="android">Android</option>
+          <option value="other">Other or not sure</option>
+        </select><br><br>
+
+        <label for="problem-type">Problem type</label><br>
+        <select id="problem-type" name="problem-type" required>
+          <option value="">Choose a problem</option>
+          <option value="hardware">Hardware or device</option>
+          <option value="software">Software or application</option>
+          <option value="network">Network or Wi-Fi</option>
+          <option value="account">Account or security</option>
+          <option value="files">Files or backup</option>
+          <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="problem-description">Describe the problem and any error message</label><br>
+        <textarea id="problem-description" name="problem-description" rows="6" required></textarea><br><br>
+
+        <label for="problem-image">Attach screenshots or photos (images only)</label><br>
+        <input id="problem-image" name="problem-image" type="file" accept="image/*" multiple><br><br>
+
+        <button type="submit">Submit support request</button>
+        <button type="reset">Clear form</button><br>
+      </form>
+      <p>This HTML form is a demonstration; receiving and tracking tickets requires a server.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html">Home</a> | <a href="contact.html">Contact</a></p>
+  </footer>
+</body>
+</html>

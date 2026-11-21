@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IT Support Website - Contact</title>  
+</head>
+<body>
+  <header>
+    <p><a href="index.html"><strong>IT Support Website</strong></a></p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact IT Support</h1>
+    <p>Tell us how to reach you and describe the technology problem you are experiencing.</p>
+  <section aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title">Contact and problem form</h2>
+      <form action="/submit-contact" method="post" enctype="multipart/form-data">
+        
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+        
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        <br>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+
+        
+          <label for="contact-date">Preferred contact date</label>
+          <input id="contact-date" name="contact-date" type="date">
+
+        
+          <label for="device">Device</label>
+          <select id="device" name="device" required>
+            <option value="">Choose a device</option>
+            <option value="desktop">Desktop computer</option>
+            <option value="laptop">Laptop</option>
+            <option value="phone">Phone or tablet</option>
+            <option value="printer">Printer or accessory</option>
+            <option value="other">Other</option>
+          </select>
+          <br>
+          <br>
+
+        <fieldset class="full-width">
+          <legend>What do you need help with?</legend>
+          <label><input type="checkbox" name="topics" value="hardware"> Device or hardware</label>
+          <label><input type="checkbox" name="topics" value="software"> Software</label>
+          <label><input type="checkbox" name="topics" value="network"> Network or Wi-Fi</label>
+          <label><input type="checkbox" name="topics" value="security"> Account security</label>
+          <label><input type="checkbox" name="topics" value="files"> Files or backup</label>
+        </fieldset>
+        <br>
+        <section class="full-width">
+          <label for="problem-description">Problem description and error messages</label><br>
+          <textarea id="problem-description" name="problem-description" rows="7" required></textarea>
+        </section>
+
+        <section class="full-width">
+          <label for="screenshots">Choose images or screenshots of the problem</label>
+          <input id="screenshots" name="screenshots" type="file" accept="image/*" multiple>
+        </section>
+
+        <section class="full-width">
+          <button type="submit">Send request</button>
+          <button type="reset">Reset form</button>
+      </form>
+      <p>Submitting this example form requires a server endpoint to receive the request and uploaded images.</p>
+    </section>
+
+    <section aria-labelledby="availability-title">
+      <h2 id="availability-title">Support availability</h2>
+      <table border="1">
+        <caption>Typical response schedule</caption>
+        <thead>
+          <tr>
+            <th scope="colgroup" colspan="3">Support hours and response times</th>
+          </tr>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Hours</th>
+            <th scope="col">Typical response</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday to Friday</th>
+            <td>9:00 AM to 5:00 PM</td>
+            <td>Within one business day</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday and Sunday</th>
+            <td colspan="2">Closed; requests are reviewed on the next business day</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="video-title">
+      <h2 id="video-title">Troubleshooting video</h2>
+      <p>Watch a short guide to diagnosing common computer problems.</p>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Zx3BQMpDJxM" title="Basic computer troubleshooting for beginners" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p><a href="https://www.youtube.com/watch?v=Zx3BQMpDJxM">Watch the troubleshooting video on YouTube</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html">Home</a> | <a href="services.html">Services</a></p>
+  </footer>
+</body>
+</html>
